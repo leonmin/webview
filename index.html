@@ -4,9 +4,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>vue-app</title>
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
   </head>
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      wx.config({
+        debug: true,
+        appId: 'wx90a3e0473fbc3345',
+        timestamp: '1632917807',
+        nonceStr: 'yoioh6ylnbp',
+        signature: 'd2b2d0dc9d2250f8f823868fa034bb80fe1d9949',
+        jsApiList: [
+          'openEnterpriseChat',
+          'openEnterpriseContact',
+          'onMenuShareTimeline',
+          'onMenuShareAppMessage',
+          'onMenuShareQQ',
+          'onMenuShareWeibo',
+          'onMenuShareQZone',
+          'startRecord',
+          'stopRecord',
+          'onVoiceRecordEnd',
+          'playVoice',
+          'pauseVoice',
+          'stopVoice',
+          'onVoicePlayEnd',
+          'uploadVoice',
+          'downloadVoice',
+          'chooseImage',
+          'previewImage',
+          'uploadImage',
+          'downloadImage',
+          'translateVoice',
+          'getNetworkType',
+          'openLocation',
+          'getLocation',
+          'hideOptionMenu',
+          'showOptionMenu',
+          'hideMenuItems',
+          'showMenuItems',
+          'hideAllNonBaseMenuItem',
+          'showAllNonBaseMenuItem',
+          'closeWindow',
+          'scanQRCode'
+        ]
+      })
+      wx.ready(function() {
+        window.wx = wx
+      })
+      wx.error(err => {
+        alert('config err:', err)
+      })
+    </script>
   </body>
 </html>
